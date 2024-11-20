@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="وب‌سایت رسمی محمد شاکرمی | برنامه‌نویس و طراح وب | پروژه‌های حرفه‌ای و آموزش برنامه‌نویسی.">
+    <meta name="keywords" content="محمد شاکرمی, شاکرمی, برنامه‌نویسی, طراحی وب, پروژه‌های شخصی">
+    <meta name="author" content="محمد شاکرمی">
+    <meta name="robots" content="index, follow">
+    <title>تماس با محمد شاکرمی</title>
+    <style>
+        /* افزودن فونت ایران‌سنس */
+        @font-face {
+            font-family: 'IRANSans';
+            src: url('https://cdn.fontcdn.ir/Font/Persian/IRANSans/IRANSans.ttf') format('truetype');
+        }
+
+        /* تنظیمات کلی صفحه */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'IRANSans', Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            direction: rtl;
+        }
+
+        /* استایل جعبه تماس */
+        .contact-box {
+            text-align: center;
+            padding: 5%;
+            width: 90%;
+            max-width: 400px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .contact-box h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-box p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .contact-box a {
+            position: relative;
+            display: inline-block;
+            width: 85%;
+            padding: 15px;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 8px;
+            color: #ffffff;
+            background: #4e54c8;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            background: rgba(78, 84, 200, 0.9);
+        }
+
+        /* استایل فوتر */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.7);
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer span {
+            font-weight: bold;
+        }
+
+        footer img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        /* استایل دکمه بازگشت به بالا */
+        #back-to-top {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #4e54c8;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background: #3e44a8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- جعبه تماس -->
+    <div class="contact-box">
+        <h2>تماس با من</h2>
+        <p>در حال حاضر در دسترس نیستم. می‌توانید از طریق ایمیل یا واتساپ با من در ارتباط باشید.</p>
+        <a href="mailto:your-email@example.com" class="email">ایمیل من</a>
+        <a href="https://wa.me/your-number" class="whatsapp">واتساپ من</a>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/coffee.png" alt="Coffee">
+        <span>کپی رایت محفوظ است - کدنویسی شده توسط محمد شاکرمی</span>
+    </footer>
+
+    <!-- دکمه بازگشت به بالا -->
+    <button id="back-to-top" title="بازگشت به بالا">↑</button>
+
+    <script>
+        // جلوگیری از راست‌کلیک
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // جلوگیری از کلیدهای میانبر رایج برای دیدن کد صفحه
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift')) {
+                event.preventDefault();
+            }
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J'))) {
+                event.preventDefault();
+            }
+        });
+
+        // جلوگیری از باز شدن ابزارهای توسعه‌دهنده در دستگاه‌های مختلف
+        (function() {
+            function devToolsOpenCheck() {
+                const threshold = 160;
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                if (widthThreshold || heightThreshold) {
+                    alert("دسترسی به کد این صفحه محدود شده است.");
+                    window.location.href = "about:blank";
+                }
+            }
+            setInterval(devToolsOpenCheck, 1000);
+        })();
+
+        // عملکرد دکمه بازگشت به بالا
+        const backToTopButton = document.getElementById('back-to-top');
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
