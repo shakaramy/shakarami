@@ -1,0 +1,109 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+
+body {
+    background: black; /* رنگ زمینه کامل مشکی */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Vazir', sans-serif;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    z-index: 1;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    background: rgba(255, 255, 0, 0.7);
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 0, 0.9);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.info-box {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2); /* رنگ کادر مشابه کادر وسط صفحه */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    color: white;
+    backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+h2 {
+    color: white;
+}
+
+/* طراحی ریسپانسیو برای دستگاه‌های کوچک‌تر */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
